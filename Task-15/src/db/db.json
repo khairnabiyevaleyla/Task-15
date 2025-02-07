@@ -1,0 +1,58 @@
+{
+  "collectionbyproducts": [
+    {
+      "id": 1,
+      "title": "Necklaces",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_1.jpg?v=1728574886"
+    },
+    {
+      "id": 2,
+      "title": "Earrings",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_2.jpg?v=1728574894"
+    },
+    {
+      "id": 3,
+      "title": "Rings",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_3.jpg?v=1728574894"
+    }
+  ],
+  "collectionbycategory": [
+    {
+      "id": 1,
+      "title": "14ct Solid Gold",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_4.jpg?v=1728576927&width=720"
+    },
+    {
+      "id": 2,
+      "title": "Spotted On",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_5.jpg?v=1728576937&width=720"
+    },
+    {
+      "id": 3,
+      "title": "Mixed Metall Jewellry",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_3.jpg?v=1728574894"
+    },
+    {
+      "id": 4,
+      "title": "Silver Era",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_6.jpg?v=1728576937&width=720"
+    }
+  ],
+  "collectionbytype": [
+    {
+      "id": 1,
+      "title": "Sustainability",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_7.jpg?v=1728632058"
+    },
+    {
+      "id": 2,
+      "title": "Size Guides",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_8.jpg?v=1728632058"
+    },
+    {
+      "id": 3,
+      "title": "Jewellry Hacks",
+      "image": "https://rokan-theme.myshopify.com/cdn/shop/files/je_9.jpg?v=1728632058"
+    }
+  ]
+}
