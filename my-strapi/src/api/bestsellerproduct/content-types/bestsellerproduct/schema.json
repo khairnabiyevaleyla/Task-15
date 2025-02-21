@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "bestsellerproducts",
+  "info": {
+    "singularName": "bestsellerproduct",
+    "pluralName": "bestsellerproducts",
+    "displayName": "bestsellerproduct"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "productname": {
+      "type": "string"
+    },
+    "mainimage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "hoverimage": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "regularprice": {
+      "type": "integer"
+    },
+    "oldprice": {
+      "type": "integer"
+    },
+    "dicounttag": {
+      "type": "string"
+    },
+    "regulartag": {
+      "type": "string"
+    }
+  }
+}

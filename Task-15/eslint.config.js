@@ -33,6 +33,7 @@ export default [
       "no-undef": "off",
       "react/prop-types": "off",
       "react/jsx-no-undef": "off",
+      "react/no-unescaped-entities": "off",
       "react-refresh/only-export-components": [
         "warn",
         { allowConstantExport: true },

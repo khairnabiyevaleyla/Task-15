@@ -23,9 +23,12 @@ const Header = () => {
                   <li className="custom-transition  cursor-pointer">
                     <i className="ri-search-line"></i>
                   </li>
-                  <li className="custom-transition  cursor-pointer">
-                    <i className="ri-user-line "></i>
-                  </li>
+                  <Link to="/register">
+                    {" "}
+                    <li className="custom-transition  cursor-pointer">
+                      <i className="ri-user-line "></i>
+                    </li>
+                  </Link>
 
                   <li className="custom-transition  cursor-pointer relative">
                     <i className="ri-poker-hearts-line"></i>

@@ -1,26 +1,29 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CollectionCards from "../shared/CollectionCards/CollectionCards";
-import { getAPI } from "../http/api";
+import { useRequest } from "../../../Task-15/src/services/http";
 
 const CollectionbyCategory = () => {
-  const [showData, setShowData] = useState([]);
+  const { data } = useRequest("collectionbycategories", {
+    module: "devApi",
+    method: "GET",
+    params: {
+      populate: "*",
+    },
+  });
 
-  useEffect(() => {
-    getAPI("/collectionbycategory", (data) => {
-      setShowData(data);
-      setFilteredData(data);
-    });
-  }, []);
-
-  if (!showData || showData.length === 0) {
-    return <div>Loading...</div>;
-  }
+  console.log(data);
 
   return (
     <div className="grid grid-cols-1 gap-1 md:grid-cols-1 lg:grid-cols-4">
-      {showData.map((card, index) => (
-        <CollectionCards key={index} {...card} size="category" />
-      ))}
+      {data &&
+        data?.data?.map((card, index) => (
+          <CollectionCards
+            key={index}
+            image={`http://localhost:1337${card.image.url}`}
+            title={card.title}
+            size="category"
+          />
+        ))}
     </div>
   );
 };

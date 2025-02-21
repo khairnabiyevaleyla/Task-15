@@ -1,26 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import CollectionCards from "../shared/CollectionCards/CollectionCards";
-import { getAPI } from "../http/api";
+import { useRequest } from "../../../Task-15/src/services/http";
 
 const CollectionbyProducts = () => {
-  const [showData, setShowData] = useState([]);
-
-  useEffect(() => {
-    getAPI("/collectionbyproducts", (data) => {
-      setShowData(data);
-      setFilteredData(data);
-    });
-  }, []);
-
-  if (!showData || showData.length === 0) {
-    return <div>Loading...</div>;
-  }
+  const { data } = useRequest("collectionbyproducts", {
+    module: "devApi",
+    method: "GET",
+    params: {
+      populate: "*",
+    },
+  });
 
   return (
     <div className="grid grid-cols-1 gap-1 md:grid-cols-1 lg:grid-cols-3">
-      {showData.map((card, index) => (
-        <CollectionCards key={index} {...card} size="products" />
-      ))}
+      {data &&
+        data?.data?.map((card, index) => (
+          <CollectionCards
+            key={index}
+            image={`http://localhost:1337${card.image.url}`}
+            title={card.title}
+            size="products"
+          />
+        ))}
     </div>
   );
 };

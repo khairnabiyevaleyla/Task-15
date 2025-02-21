@@ -4,6 +4,8 @@ import Home from "./pages/ui/home/index";
 import Shop from "./pages/ui/shop/index";
 import Blog from "./pages/ui/blog/index";
 import BlogDetail from "./pages/ui/blog-detail/index";
+import Login from "./pages/login/index";
+import Register from "./pages/register/index";
 
 export const router = createBrowserRouter([
   {
@@ -28,5 +30,13 @@ export const router = createBrowserRouter([
         element: <BlogDetail />,
       },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
